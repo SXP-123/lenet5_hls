@@ -31,7 +31,7 @@ void CONVOLUTION_LAYER_1(const float input_feature[image_Batch*CONV_1_INPUT_WH*C
 #pragma HLS array_partition variable=OBRAM complete dim=2
 
 	copy_input_1:
-	for(int batch_cnt=0;batch_cnt<image_Batch;batch_cnt++){
+	for(int batch_cnt=0;batch_cnt<image_Batch;batch_cnt++){  //归一化
 		copy_input_2 :
 		for(int i=0;i<CONV_1_INPUT_WH;i++){
 			copy_input_3 :
